@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    /*background-color: #FFF7EC;*/
+    color: #173C2C;
+}
+header {
+    background-color: #323232;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-content {
+    width: 90%;
+    margin: 15rem auto;
+    text-align:left;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+
+nav a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.start-reservation {
+    background-color: #c7362f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.start-reservation:hover {
+    background-color: #a52c26;
+}
+
+
+.chatBox {
+    max-width: 95vw;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.chatHeader {
+    background: #f0f0f0;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chatBody {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.messageBot {
+    background: #e6f3ff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.optionBtn {
+    background: #2c77ff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: stretch;
+}
+
+.chatInput {
+    display: flex;
+    border-top: 1px solid #eee;
+}
+
+.chatInput input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+.chatInput button {
+    background: #2c77ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.chatToggleBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2c77ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.chatCloseBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, stroke 0.2s ease;
+}
+
+.chatCloseBtn:hover svg {
+    stroke: #c7362f;
+    transform: scale(1.1);
+}
+.chatCloseBtn:focus {
+    outline: 2px solid #c7362f;
+    outline-offset: 2px;
+}
+.start-reservation,
+.optionBtn {
+transition: background-color 0.3s ease;
+}
+
+.chatInput input:focus {
+    outline: 2px solid #2c77ff;
+    outline-offset: 2px;
+}
