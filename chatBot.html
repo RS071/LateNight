@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Reservation Assistant</title>
-        <link rel="stylesheet" href="style.css">
-        
-    </head>
-    
-    <body>
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <img src="https://statmando.com/images/logo-banner.png" alt="Statmando Logo" style="height: 40px;">
-                </div>
-                
-                <nav>
-                    
-                    <a href="#">Home</a>
-                    <a href="#">Reserve</a>
-                    <a href="#">Parks</a>
-                    <button class="start-reservation">Start Reservation</button>
-                </nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservation Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://statmando.com/images/logo-banner.png" alt="Statmando Logo" />
             </div>
-        </header>
-        
-        <div class="main-content">
-            <h1>Reserve a park for your next dis golf event</h1> 
-            <p> Our reservation assistant can help you book the park with ease.</p>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Reserve</a>
+                <a href="#">Parks</a>
+                <button class="start-reservation">Start Reservation</button>
+            </nav>
         </div>
-        
-        <div class="chatBox">
-            <div class="chatHeader">
-            <span>🤖 Reservation Assistant </span>
+    </header>
+
+    <div class="main-content">
+        <h1>Reserve a park for your next disc golf event</h1>
+        <p>Our reservation assistant can help you book the park with ease.</p>
+    </div>
+
+    <div class="chatBox" id="chatBox">
+        <div class="chatHeader">
+            <span>🤖 Reservation Assistant</span>
             <button class="chatCloseBtn" onclick="toggleChat()" aria-label="Close Chat">
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
-              </button>
-              
+            </button>
         </div>
 
-        <div class="chatBody" id="chat-Body">
+        <div class="chatBody" id="chatBody">
             <div class="messageBot">
                 Hi! I can help you reserve a park for your disc golf event. Want to get started?
             </div>
-            <button class="optionBtn" onclick="sendMessage()">Get started</button>
+            <div class="options" id="chatOptions">
+                <button class="optionBtn" onclick="nextStep()">Get started</button>
+            </div>
         </div>
-
-        <div class ="chatInput">
-            <input type="text" id ="userInput" placeholder="Type a Message..."/>
-            <button onclick="sendMessage()"> Send </button>
-        </div>
+        
     </div>
-    <script src="script.js"></script>
+
     <button class="chatToggleBtn" onclick="toggleChat()">💬 Chat</button>
 
-
+    <script src="script.js"></script>
 </body>
 </html>

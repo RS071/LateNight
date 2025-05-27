@@ -17,7 +17,7 @@ header {
 
 .container {
     width: 90%;
-    margin: 0 ;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +25,7 @@ header {
 .main-content {
     width: 90%;
     margin: 15rem auto;
-    text-align:left;
+    text-align: left;
 }
 
 .main-content h1 {
@@ -48,7 +48,6 @@ header {
     display: block;
 }
 
-
 nav a {
     margin: 0 1rem;
     color: #fff;
@@ -63,11 +62,11 @@ nav a {
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 .start-reservation:hover {
     background-color: #a52c26;
 }
-
 
 .chatBox {
     max-width: 95vw;
@@ -79,7 +78,7 @@ nav a {
     border-radius: 10px;
     background: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none; /* Initially hidden */
     flex-direction: column;
     overflow: hidden;
     font-size: 14px;
@@ -111,13 +110,22 @@ nav a {
 }
 
 .optionBtn {
-    background: #2c77ff;
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
+    margin: 4px 4px 0 0; /* slight margin for spacing */
+    padding: 6px 12px;    /* reduced padding */
+    border-radius: 4px;
     cursor: pointer;
-    align-self: stretch;
+    font-size: 0.9rem;
+    display: inline-block;
+    line-height: 1.2;
+}
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px; /* smaller spacing between buttons */
+    margin-top: 8px;
 }
 
 .chatInput {
@@ -131,6 +139,11 @@ nav a {
     border: none;
 }
 
+.chatInput input:focus {
+    outline: 2px solid #2c77ff;
+    outline-offset: 2px;
+}
+
 .chatInput button {
     background: #2c77ff;
     color: white;
@@ -138,6 +151,7 @@ nav a {
     padding: 10px;
     cursor: pointer;
 }
+
 .chatToggleBtn {
     position: fixed;
     bottom: 20px;
@@ -172,12 +186,26 @@ nav a {
     outline: 2px solid #c7362f;
     outline-offset: 2px;
 }
-.start-reservation,
-.optionBtn {
-transition: background-color 0.3s ease;
+
+/* Chat bubbles */
+.chat-bubble.user {
+    background-color: #d1e7dd;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+    align-self: flex-end;
+    color: #0f5132;
 }
 
-.chatInput input:focus {
-    outline: 2px solid #2c77ff;
-    outline-offset: 2px;
+.chat-bubble.bot {
+    background-color: #e6f3ff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+    align-self: flex-start;
+}
+
+.chat-link {
+    color: #2c77ff;
+    text-decoration: underline;
 }
