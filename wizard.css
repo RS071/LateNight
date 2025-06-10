@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+
+    color: black;
+    background-color: #fef6e8;
+    border: 2px solid rgb(98, 61, 61);
+}
+
+section {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: darkgreen;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.container {
+    width: 95%;
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-button {
+    background-color: #c7362f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.home-button:hover {
+    background-color: #a52c26;
+}
+
+a {
+    color: blue;
+}
+
+#dropDown {
+   text-align: center;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin: auto;
+   font-size: 25px;
+}
+
+.menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#wrapperOne, #wrapperTwo, #wrapperThree {
+   display: none;
+   text-align: center;
+   height: 460px;
+   margin: 10px;
+}
+
+#wrapperZero {
+   display: block;
+   text-align: center;
+   height: 460px;
+   margin: 10px;
+}
+
+h1, p {
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+footer {
+    background-color: dimgrey;
+    margin-top: 20px;
+    padding: 1rem 0;
+    color: #fff;
+}

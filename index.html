@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Park Reservation Main</title>
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+    
+<body>
+   <header id = "headlinks">
+      <div class="container">
+         <div class="logo">
+            <img src="https://statmando.com/images/logo-banner.png" alt="Statmando Logo" style="height: 40px;">
+         </div>
+                
+         <nav> 
+            <button class="home-button" onclick="document.location='index.html'">Home Page</button>
+         </nav>
+      </div>
+   </header>
+        
+   <section id = "title" class = "main-content">
+
+      <h1>Reserve a Disc Golf Course the Easy Way</h1>
+	
+   </section>
+
+   <section id = "image" class = "main-content">
+
+      <img src = "chatbot.png" alt = "ChatBot">
+	
+   </section>
+
+   <section id = "wizard" class = "main-content">
+
+        <h2><a href = "wizard/wizard.html">Park Wizard</a></h2>
+
+        <p>Don't know where to start? Our park wizard will guide you through the process!</p>
+
+    </section>
+
+   <section id = "chat" class = "main-content">
+
+        <h2><a href="chat/chat.html">Chat Assistant</a></h2>
+
+        <p>Have questions? Our chatbot can help answer some common questions!</p>
+
+    </section>
+
+    <section id = "form" class = "main-content">
+
+        <h2><a href="form/form.html">Reservation Form</a></h2>
+
+        <p>Ready to reserve? Fill out our form and we'll send it off to the right place!</p>
+
+    </section>
+
+    <section id = "map" class = "main-content">
+
+    	<div id = "leafmap" style="width: 1000px; height: 400px;"></div>
+
+    </section>
+
+    <script>
+
+	const map = L.map('map').setView([47.3132, -122.1786], 10);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+	var marker1 = L.marker([47.2785, -122.1967]).addTo(map);
+	marker1.bindPopup("White River").openPopup();
+
+	var marker2 = L.marker([47.185683, -122.2126]).addTo(map);
+	marker2.bindPopup("Riverside Disc Golf Course").openPopup();
+
+	var marker3 = L.marker([47.209620526121,-122.038975954060]).addTo(map);
+	marker3.bindPopup("Farmers Park").openPopup();
+
+	var marker4 = L.marker([47.379924, -122.04274]).addTo(map);
+	marker4.bindPopup("Gaffney's Grove Disc Golf Park").openPopup();
+
+	var marker5 = L.marker([47.367450000000,-122.275233000000]).addTo(map);
+	marker5.bindPopup("Lake Fenwick Disc Golf Course").openPopup();
+
+</script>
+
+   <footer id = "footlinks">
+	<div class = "container">
+	   <nav> 
+              <a href="https://www.pdga.com/">PGDA</a>
+              <a href="https://statmando.com/contact-us/">Contact</a>
+            </nav>
+        <p>Powered by StatMando&#8482</p>
+        </div>
+   </footer> 
+
+</body>
+</html>

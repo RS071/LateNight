@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    color: black;
+    background-color: #fef6e8;
+    border: 2px solid rgb(98, 61, 61);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hl hl hl hl hl hl"
+    "ti ti ti im im im"
+    "wi wi cb cb fm fm"
+    "ma ma ma ma ma ma"
+    "fl fl fl fl fl fl";
+}
+
+/* name all major sections on the page */
+#headlinks {grid-area: hl;}
+#title {grid-area: ti;}
+#image {grid-area: im;}
+#chat {grid-area: cb;}
+#form {grid-area: fm;}
+#wizard {grid-area: wi;}
+#map {grid-area: ma;}
+#footlinks {grid-area: fl;}
+
+section {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: darkgreen;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.container {
+    width: 95%;
+    margin: 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+#chat, #form, #wizard {
+    border-style: solid;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+#chat {
+   border-color: deepskyblue;
+   background-color: deepskyblue;
+}
+
+#form {
+   border-color: green;
+   background-color: green;
+}
+
+#wizard {
+   border-color: tomato;
+   background-color: tomato;
+}
+
+.home-button {
+    background-color: #c7362f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.home-button:hover {
+    background-color: #a52c26;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#leafmap { 
+   height: 180px;
+   text-align: center;
+   box-sizing: border-box;
+}
+
+footer {
+    background-color: dimgrey;
+    margin-top: 20px;
+    padding: 1rem 0;
+    color: #fff;
+}

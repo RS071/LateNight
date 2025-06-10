@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Park Wizard Main</title>
+   <link rel="stylesheet" href="wizard.css">
+</head>
+    
+<body>
+   <header id = "headlinks">
+      <div class="container">
+         <div class="logo">
+            <img src="https://statmando.com/images/logo-banner.png" alt="Statmando Logo" style="height: 40px;">
+         </div>
+                
+         <nav>
+	    <button class="home-button" onclick="document.location='../index.html'">Back to Home</button>
+         </nav>
+      </div>
+   </header>
+
+   <h1>Step 1: Select a park!</h1>
+	
+   <select id="dropDown" onchange="test()" class="menu">
+      <option value="default" selected="selected">Park Selection</option>
+      <option value="groove" id="gaffneysgrove">Gaffney's Grove Disc Golf Park</option>
+      <option value="lake" id="lakefenwick">Lake Fenwick Disc Golf Course</option>
+      <option value="river" id="riverside">Riverside Disc Golf Course</option>
+   </select>
+
+   <div id="wrapperZero">
+
+       <hr>
+
+   </div>
+
+   <div id="wrapperOne">
+
+      <hr>
+      <h1>Step 2: This park can be <br>reserved with our form!</h1>
+      <p>Here is a link to our form: <a href = "../form/form.html">Form Page</a></p>
+
+      <hr>
+      <h1>Have any questions?</h1>
+      <p>Feel free to ask the <a href = "../chat/chat.html">chatbot</a> or contact us <a href = "https://statmando.com/contact-us/">here</a>!</p>
+
+   </div>
+
+   <div id="wrapperTwo">
+
+      <hr>
+      <h1>Step 2: This park can be reserved <br>on an external page!</h1>
+      <p>Here is a link to their page where you can register: <a href = "https://www.kentwa.gov/home/showpublisheddocument/14834/637279804025430000">Form Link</a></p>
+
+      <hr>
+      <h1>Have any questions?</h1>
+      <p>Feel free to ask the <a href = "../chat/chat.html">chatbot</a> or contact us <a href = "https://statmando.com/contact-us/">here</a>!</p>
+
+   </div>
+
+   <div id="wrapperThree">
+
+      <hr>
+      <h1>Step 2: This park will have to be <br>contacted through other means.</h1>
+      <p>E-Mail Contact: <a href = "https://www.pdga.com/course-contact?course=25417">Kevin Holland #23220</a></p>
+      <p>Phone Number: 253-227-7031</p>
+    
+      <hr>
+      <h1>Have any questions?</h1>
+      <p>Feel free to ask the <a href = "../chat/chat.html">chatbot</a> or contact us <a href = "https://statmando.com/contact-us/">here</a>!</p>
+
+   </div>
+
+   <script>
+
+   var dropDown = document.getElementById("dropDown"),
+   myWrappers = [
+      document.getElementById("wrapperZero"),
+      document.getElementById("wrapperOne"),
+      document.getElementById("wrapperTwo"),
+      document.getElementById("wrapperThree")
+   ];
+
+   function test() {
+      for (i = 0; i < myWrappers.length; i++) {
+         if(dropDown.value === "default") {
+            myWrappers[i].style.display = "none";
+            myWrappers[0].style.display = "block";
+         } else if(dropDown.value === "groove"){
+            myWrappers[i].style.display = "none";
+            myWrappers[1].style.display = "block";
+         } else if(dropDown.value === "lake"){
+            myWrappers[i].style.display = "none";
+            myWrappers[2].style.display = "block";
+         } else if(dropDown.value === "river"){
+            myWrappers[i].style.display = "none";
+            myWrappers[3].style.display = "block";
+         }
+      }
+   }
+
+   </script>
+
+   <footer id = "footlinks">
+	<div class = "container">
+	   <nav> 
+              <a href="https://www.pdga.com/">PGDA</a>
+              <a href="https://statmando.com/contact-us/">Contact</a>
+            </nav>
+        <p>Powered by StatMando&#8482</p>
+        </div>
+   </footer> 
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservation Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("./form.jpg");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+    }
+    .reservation-box {
+      background: white;
+      padding-left: 30px;
+      padding-right: 40px;
+      padding-bottom: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .reservation-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reservation-box">
+    <h2>Reservation Form</h2>
+    <form id="reservationForm">
+       <label for="parks">Park</label>
+
+       <select name="parks" id="parks" placeholder="Park Selection" required>
+  	 <option value="lake">Lake Fenwick Disc Golf Course</option>
+  	 <option value="grove">Gaffney's Grove Disc Golf Park</option>
+  	 <option value="rivee">Riverside Disc Golf Course</option>
+  	 <option value="farmer">Farmers Park</option>
+         <option value="white">White River</option>
+      </select> 
+
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your full name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="phone" id="phone" placeholder="(000) 000-0000" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+
+      <label for="date">Select Date</label>
+      <input type="text" id="date" placeholder="Pick a date" required>
+
+      <label for="starttime">Select Start Time</label>
+      <input type="text" id="starttime" placeholder="Pick a start time" required>
+
+      <label for="endtime">Select End Time</label>
+      <input type="text" id="endtime" placeholder="Pick a end time" required>
+
+      <label for="event">Event Type</label>
+      <input type="text" id="event" placeholder="e.g., Tournament, Practice" required>
+
+      <button type="submit">Reserve</button>
+    </form>
+
+    <a href="../index.html">Back to Home Page</a>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    flatpickr("#date", {
+      minDate: "today",
+      dateFormat: "m-d-Y",
+      disable: [
+        "2024-04-13",
+        "2024-04-18",
+        "2024-04-22",
+        "2024-04-26",
+        "2024-04-29"
+      ]
+    });
+
+    flatpickr("#starttime", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "h:i K",
+      defaultHour: "10",
+      defaultMinute: "0",
+      minTime: "07:00",
+      maxTime: "20:00",
+      time_24hr: false
+    });
+
+    flatpickr("#endtime", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "h:i K",
+      defaultHour: "12",
+      defaultMinute: "0",
+      minTime: "07:00",
+      maxTime: "20:00",
+      time_24hr: false
+    });
+  </script>
+
+</body>
+</html>
